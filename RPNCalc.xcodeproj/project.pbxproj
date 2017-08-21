@@ -14,6 +14,7 @@
 		23763E941CE4A44D00348073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23763E921CE4A44D00348073 /* LaunchScreen.storyboard */; };
 		23763E9F1CE4A44D00348073 /* RPNCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23763E9E1CE4A44D00348073 /* RPNCalcTests.swift */; };
 		23763EAA1CE4A44D00348073 /* RPNCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23763EA91CE4A44D00348073 /* RPNCalcUITests.swift */; };
+		23763EB91CE5EA9300348073 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23763EB81CE5EA9300348073 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		23763EA51CE4A44D00348073 /* RPNCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPNCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23763EA91CE4A44D00348073 /* RPNCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPNCalcUITests.swift; sourceTree = "<group>"; };
 		23763EAB1CE4A44D00348073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23763EB81CE5EA9300348073 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		23763E881CE4A44D00348073 /* RPNCalc */ = {
 			isa = PBXGroup;
 			children = (
-				23763E891CE4A44D00348073 /* AppDelegate.swift */,
+				23763EB71CE4A48200348073 /* OtherStuff */,
 				23763E8B1CE4A44D00348073 /* ViewController.swift */,
 				23763E8D1CE4A44D00348073 /* Main.storyboard */,
-				23763E901CE4A44D00348073 /* Assets.xcassets */,
-				23763E921CE4A44D00348073 /* LaunchScreen.storyboard */,
-				23763E951CE4A44D00348073 /* Info.plist */,
+				23763EB81CE5EA9300348073 /* Calculator.swift */,
 			);
 			path = RPNCalc;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				23763EAB1CE4A44D00348073 /* Info.plist */,
 			);
 			path = RPNCalcUITests;
+			sourceTree = "<group>";
+		};
+		23763EB71CE4A48200348073 /* OtherStuff */ = {
+			isa = PBXGroup;
+			children = (
+				23763E891CE4A44D00348073 /* AppDelegate.swift */,
+				23763E901CE4A44D00348073 /* Assets.xcassets */,
+				23763E921CE4A44D00348073 /* LaunchScreen.storyboard */,
+				23763E951CE4A44D00348073 /* Info.plist */,
+			);
+			name = OtherStuff;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				TargetAttributes = {
 					23763E851CE4A44D00348073 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = C77SEDCY7M;
 					};
 					23763E991CE4A44D00348073 = {
 						CreatedOnToolsVersion = 7.0;
@@ -257,6 +269,7 @@
 			files = (
 				23763E8C1CE4A44D00348073 /* ViewController.swift in Sources */,
 				23763E8A1CE4A44D00348073 /* AppDelegate.swift in Sources */,
+				23763EB91CE5EA9300348073 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,10 +411,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RPNCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazoolo.RPNCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -409,10 +425,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RPNCalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lazoolo.RPNCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -483,6 +502,7 @@
 				23763EB01CE4A44D00348073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23763EB11CE4A44D00348073 /* Build configuration list for PBXNativeTarget "RPNCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +511,7 @@
 				23763EB31CE4A44D00348073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		23763EB41CE4A44D00348073 /* Build configuration list for PBXNativeTarget "RPNCalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +520,7 @@
 				23763EB61CE4A44D00348073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
